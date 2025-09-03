@@ -3,14 +3,14 @@ import { Shield, Link as LinkIcon, AlertTriangle, Map, Newspaper, Lock } from 'l
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sa-blue/40 via-sa-black to-black text-white">
+    <div className="min-h-screen bg-gradient-to-b from-sa-blue/30 via-sa-black to-black text-white">
       <header className="sticky top-0 z-40 backdrop-blur border-b border-white/10">
         <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="size-9 rounded-full gradient-flag shadow-inner shadow-white/10" />
+            <div className="w-9 h-9 rounded-full gradient-flag shadow-inner shadow-white/10" />
             <div className="flex items-center gap-2">
-              <Shield className="text-sa-gold" />
-              <span className="font-display text-lg">Ubuntu Shield</span>
+              <Shield className="text-sa-gold w-5 h-5" />
+              <span className="font-display text-lg tracking-wide">Ubuntu Shield</span>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm opacity-90">
@@ -39,36 +39,36 @@ function App() {
               </a>
             </div>
           </div>
-          <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: 'spring', stiffness: 120, damping: 12 }} className="relative">
+          <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: 'spring', stiffness: 120, damping: 14 }} className="relative">
             <div className="aspect-video rounded-2xl bg-[url('https://images.unsplash.com/photo-1542372147193-a7aca54189cd?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center ring-1 ring-white/10 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 p-6">
                 <div className="flex items-center gap-2 text-sm text-white/80">
-                  <Lock className="size-4 text-sa-gold" /> Johannesburg CBD Skyline
+                  <Lock className="w-4 h-4 text-sa-gold" /> Johannesburg CBD Skyline
                 </div>
               </div>
             </div>
-            <motion.div className="absolute -top-6 -right-6 rounded-xl bg-sa-gold/10 border border-sa-gold/30 text-sa-gold px-4 py-3 backdrop-blur shadow-lg" animate={{ y: [0, -6, 0] }} transition={{ duration: 4, repeat: Infinity }}>
+            <motion.div className="absolute -top-6 -right-6 rounded-xl bg-sa-gold/10 border border-sa-gold/30 text-sa-gold px-4 py-3 backdrop-blur shadow-lg" animate={{ y: [0, -6, 0] }} transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}>
               Trusted. Futuristic. Proudly South African.
             </motion.div>
           </motion.div>
         </section>
 
         <section id="check" className="py-12">
-          <h2 className="font-display text-2xl mb-4 flex items-center gap-2"><LinkIcon className="size-5 text-sa-gold" /> Suspicious Link Checker</h2>
+          <h2 className="font-display text-2xl mb-4 flex items-center gap-2"><LinkIcon className="w-5 h-5 text-sa-gold" /> Suspicious Link Checker</h2>
           <div className="grid md:grid-cols-[1fr_auto] gap-3">
-            <input placeholder="Paste link or phone number" className="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 outline-none focus:ring-2 focus:ring-sa-gold/50" />
+            <input placeholder="Paste link or phone number" className="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 outline-none focus:ring-2 focus:ring-sa-gold/50 placeholder:text-white/50" />
             <button className="px-5 py-3 rounded-lg bg-sa-gold text-black hover:bg-yellow-400">Scan</button>
           </div>
           <div className="mt-4 text-sm text-white/70">Mock ML result appears here with animated shield.</div>
         </section>
 
         <section id="report" className="py-12">
-          <h2 className="font-display text-2xl mb-4 flex items-center gap-2"><AlertTriangle className="size-5 text-sa-gold" /> Anonymous Scam Reporting</h2>
+          <h2 className="font-display text-2xl mb-4 flex items-center gap-2"><AlertTriangle className="w-5 h-5 text-sa-gold" /> Anonymous Scam Reporting</h2>
           <div className="rounded-xl border border-white/10 bg-white/5 p-4 md:p-6">
             <div className="grid gap-3">
-              <input placeholder="Scam title" className="rounded-lg bg-white/5 border border-white/10 px-4 py-3 outline-none" />
-              <textarea placeholder="Describe what happened (no personal info)" className="min-h-28 rounded-lg bg-white/5 border border-white/10 px-4 py-3 outline-none" />
+              <input placeholder="Scam title" className="rounded-lg bg-white/5 border border-white/10 px-4 py-3 outline-none placeholder:text-white/50" />
+              <textarea placeholder="Describe what happened (no personal info)" className="min-h-28 rounded-lg bg-white/5 border border-white/10 px-4 py-3 outline-none placeholder:text-white/50" />
               <div className="flex items-center gap-3">
                 <input type="file" className="text-sm" />
                 <button className="px-5 py-3 rounded-lg bg-sa-blue hover:bg-sa-blue/90">Submit Report</button>
@@ -79,19 +79,19 @@ function App() {
         </section>
 
         <section id="alerts" className="py-12">
-          <h2 className="font-display text-2xl mb-4 flex items-center gap-2"><Shield className="size-5 text-sa-gold" /> Community Alerts</h2>
+          <h2 className="font-display text-2xl mb-4 flex items-center gap-2"><Shield className="w-5 h-5 text-sa-gold" /> Community Alerts</h2>
           <div className="rounded-xl border border-white/10 bg-sa-red/10 p-4 ring-1 ring-sa-red/30 animate-pulse">
             ⚠ This site has been flagged 25 times by the community.
           </div>
         </section>
 
         <section id="trends" className="py-12">
-          <h2 className="font-display text-2xl mb-4 flex items-center gap-2"><Map className="size-5 text-sa-gold" /> Fraud Trends</h2>
+          <h2 className="font-display text-2xl mb-4 flex items-center gap-2"><Map className="w-5 h-5 text-sa-gold" /> Fraud Trends</h2>
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">Animated SA map heatmap placeholder.</div>
         </section>
 
         <section id="news" className="py-12">
-          <h2 className="font-display text-2xl mb-4 flex items-center gap-2"><Newspaper className="size-5 text-sa-gold" /> SA Fraud News</h2>
+          <h2 className="font-display text-2xl mb-4 flex items-center gap-2"><Newspaper className="w-5 h-5 text-sa-gold" /> SA Fraud News</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[1,2,3].map(i => (
               <article key={i} className="rounded-xl overflow-hidden bg-white/5 border border-white/10">
